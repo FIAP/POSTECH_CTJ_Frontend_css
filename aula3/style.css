@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: white;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100vh;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.container_logo {
+    display: flex;
+    align-items: center;
+}
+
+aside {
+    padding: 10px;
+    background-color: #404040;
+}
+
+.imagem_dashboard {
+    width: 32px;
+    height: 32px;
+    background-image: url('./imagens/bxs_dashboard.png');
+    display: inline-block;
+}
+
+.imagem_lista {
+    width: 32px;
+    height: 32px;
+    background-image: url('./imagens/lista.png');
+    display: inline-block;
+}
+
+.container_links ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+table {
+    margin-top: 40px;
+    width: 80%;
+    font-weight: 400;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+section {
+    margin: 32px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.tabela p {
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+}
+
+caption {
+    text-align: left;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+}
+
+th {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    color: #828282;
+}
+
+td {
+    padding: 10px 0;
+    border-top: 1px solid rgba(108, 117, 125, 0.50);
+}
+
+td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+tr:hover {
+    background-color: lightgray;
+}
+
+button {
+    border-radius: 999px;
+    background: #0984E3;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 5px 15px 0px rgba(37, 44, 97, 0.15), 0px 2px 4px 0px rgba(136, 144, 194, 0.20);
+}

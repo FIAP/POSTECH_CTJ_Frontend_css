@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: white;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100vh;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.container_logo {
+    display: flex;
+    align-items: center;
+}
+
+aside {
+    padding: 10px;
+    background-color: #404040;
+}
+
+.container_links ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
