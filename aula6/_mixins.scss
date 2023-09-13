@@ -1,0 +1,9 @@
+@mixin mostra-icone($url) {
+    @extend %tamanho-icone;
+    background-image: url($url);
+    display: inline-block;
+}
+
+@mixin sombra($color, $offset-x, $offset-y, $blur) {
+    box-shadow: $color $offset-x $offset-y $blur;
+}

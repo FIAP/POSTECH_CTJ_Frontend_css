@@ -1,0 +1,241 @@
+@use "variaveis";
+@use "placeholders";
+@use "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: variaveis.$cor-preta;
+    font-family: variaveis.$fonte-principal;
+    font-weight: variaveis.$fonte-negrito;
+    color: variaveis.$cor-branca;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100vh;
+}
+
+.cabecalho {
+    justify-content: flex-end;
+    @extend %posicionamento-flexivel;
+    padding: 10px;
+    gap: 20px;
+}
+
+aside {
+    padding: 10px;
+    background-color: variaveis.$cor-cinza ; //Cor de fundo cinza
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 89px;
+
+    h1 {
+        font-family: 'Orelega One', cursive;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .container_logo {
+        @extend %posicionamento-flexivel;
+    }
+
+    .container_links ul li {
+        @extend %posicionamento-flexivel;
+        gap: 20px;
+        border-radius: 18px;
+        padding: 5px;
+        margin-bottom: 21px;
+
+        &:first-of-type {
+            background-color: variaveis.$cor-link-menu;
+        }
+
+        .imagem_dashboard {
+            @include mixins.mostra-icone('./imagens/bxs_dashboard.png');
+        }
+
+        .imagem_lista {
+            @include mixins.mostra-icone('./imagens/lista.png');
+        }
+    }
+}
+
+/* Aplicação da imagem que vai ao lado do texto no menu lateral
+O imagem_lista também */
+
+
+a {
+    text-decoration: none;
+    color: variaveis.$cor-branca;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: variaveis.$fonte-regular;
+}
+
+table {
+    margin-top: 40px;
+    width: 80%;
+    font-weight: variaveis.$fonte-regular; //Peso de fonte normal
+    text-align: left;
+    border-collapse: collapse;
+
+    caption {
+        text-align: left;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: variaveis.$fonte-negrito;
+        line-height: 23px;
+    }
+}
+
+section {
+    margin: 46px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: variaveis.$fonte-negrito;
+}
+
+.tabela p {
+    font-size: 12px;
+    font-weight: variaveis.$fonte-negrito;
+    color: variaveis.$cor-cinza-claro;
+}
+
+
+
+th {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: variaveis.$fonte-negrito;
+    line-height: 23px;
+    color: variaveis.$cor-cinza-normal;
+}
+
+td {
+    padding: 10px 0;
+    border-top: 1px solid variaveis.$cor-cinza-transparencia;
+
+    &:first-child {
+        @extend %posicionamento-flexivel;
+        gap: 10px;
+    }
+}
+
+
+tr:hover {
+    background-color: variaveis.$cor-cinza-claro;
+}
+
+button {
+    margin-top: 37.5px;
+    border-radius: 999px;
+    background: variaveis.$cor-azul;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    color: variaveis.$cor-branca;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 5px 15px 0px rgba(37, 44, 97, 0.15), 0px 2px 4px 0px rgba(136, 144, 194, 0.20);
+}
+
+.grafico {
+    @extend %container-informacoes;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        color: variaveis.$cor-preta;
+        font-weight: variaveis.$fonte-regular;
+        align-items: flex-end;
+
+        li {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li:nth-child(1) {
+            div {
+                @include mixins.cria-barra(90px, variaveis.$cor-laranja);
+            }
+        }
+
+        li:nth-child(2) {
+            div {
+                @include mixins.cria-barra(119px, variaveis.$cor-azul-claro);
+            }
+        }
+
+        li:nth-child(3) {
+            div {
+                @include mixins.cria-barra(60px, variaveis.$cor-azul-marinho)
+            }
+        }
+    }
+}
+
+.informacoes {
+    @extend %container-informacoes;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        height: 70%;
+
+        li {
+            text-align: center;
+            padding: 10px;
+            border-radius: 18px;
+            @include mixins.sombra(rgba(0, 0, 0, 0.25), 0px, 4px, 4px);
+            list-style-type: none;
+            width: 20%;
+
+            img {
+                margin-bottom: 10px;
+            }
+
+
+            &:nth-child(1) {
+                background-color: variaveis.$cor-laranja;
+            }
+
+            &:nth-child(2) {
+                background-color: variaveis.$cor-azul-claro;
+            }
+
+            &:nth-child(3) {
+                background-color: variaveis.$cor-azul-marinho;
+            }
+
+            p:first-of-type {
+                font-size: 32px;
+            }
+
+            p:last-child {
+                font-size: 14px;
+                font-weight: variaveis.$fonte-regular;
+            }
+        }
+    }
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 73px;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+}

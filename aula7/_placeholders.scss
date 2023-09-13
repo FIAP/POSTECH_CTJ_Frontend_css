@@ -1,0 +1,28 @@
+@use "variaveis";
+
+%posicionamento-flexivel {
+    display: flex;
+    align-items: center;
+}
+
+%tamanho-icone {
+    width: 32px;
+    height: 32px;
+}
+
+%container-informacoes {
+    background-color: variaveis.$cor-cinza-mais-claro;
+    border-radius: 28px;
+    padding: 17px;
+
+    h3 {
+        color: #000;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+%tamanho-barra-grafico {
+    width: 50px;
+    border-radius: 18px;
+}

@@ -1,0 +1,16 @@
+@mixin mostra-icone($url) {
+    @extend %tamanho-icone;
+    background-image: url($url);
+    display: inline-block;
+}
+
+@mixin sombra($color, $offset-x, $offset-y, $blur) {
+    box-shadow: $color $offset-x $offset-y $blur;
+}
+
+@mixin cria-barra($tamanho, $cor) {
+    width: 50px;
+    height: $tamanho;
+    background-color: $cor;
+    border-radius: 18px;
+}
